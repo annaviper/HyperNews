@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a post</title>
+</head>
+<body>
+    <form method="post" action="{% url 'create' %}">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input id="title" type="text" name="title">
+
+        <label for="text">Text:</label>
+        <input id="text" type="text" name="text">
+
+        <input type="submit" value="Add">
+    </form>
+    <a href="/news/" target="_blank">Main Page</a>
+</body>
+</html>
+
+<!--action="{% url 'create' %}"-->
